@@ -10,6 +10,7 @@
     <div class="mx-auto max-w-6xl px-5 pb-12 pt-6 grid gap-12 md:grid-cols-12">
         {{-- Brand --}}
         <div class="md:col-span-5">
+            <img src="{{ asset('images/logo.png') }}" alt="PT Natura Folia Export logo" width="96" height="96" class="mb-4 h-24 w-24" loading="lazy">
             <a href="{{ url('/') }}" class="font-display text-2xl font-extrabold tracking-tight text-char-900">
                 Natura Folia <span class="text-ember-500">Export</span>
             </a>

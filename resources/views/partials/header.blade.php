@@ -8,8 +8,10 @@
 @endphp
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur text-char-900 border-b border-ash-100">
     <div class="mx-auto max-w-6xl px-5 h-20 flex items-center justify-between">
-        <a href="{{ route('home') }}" class="font-display text-xl font-extrabold tracking-tight">
-            Natura Folia <span class="text-ember-500">Export</span>
+        <a href="{{ route('home') }}" class="group flex items-center gap-3 font-display text-xl font-extrabold tracking-tight">
+            <img src="{{ asset('images/logo-sm.png') }}" alt="PT Natura Folia Export logo" width="48" height="48"
+                 class="h-12 w-12 transition-transform duration-500 group-hover:rotate-[360deg]">
+            <span>Natura Folia <span class="text-ember-500">Export</span></span>
         </a>
 
         <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
