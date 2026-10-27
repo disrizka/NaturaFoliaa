@@ -51,4 +51,44 @@
         </dl>
     </div>
 </div>
+
+{{-- FAQ --}}
+@php
+    $faqs = [
+        ['What products do you offer?', 'We supply two grades of Indonesian charcoal briquettes: Shisha Grade (cubes) and BBQ Charcoal Briquette (hexagonal). Full specifications are listed on the Products & Specifications page.'],
+        ['How do I request a quotation?', 'Contact us via WhatsApp or email and share your product requirements, target quantity, destination, and preferred delivery terms. We will review availability, specifications, and pricing before sending a quotation.'],
+        ['Which payment methods are available?', 'Telegraphic Transfer (T/T), Letter of Credit (L/C), and customized payment terms for qualified business transactions. All payment methods are subject to transaction-specific agreement.'],
+        ['What cooperation models do you offer?', 'Export Trading, Supplier–Buyer Matching, and Sourcing & Export Coordination. Any introduction fee or commission for matching is subject to a separate written agreement.'],
+        ['How does an order proceed?', 'Initial inquiry, supplier and product verification, quotation and agreement, order confirmation, then shipment coordination according to the contract.'],
+        ['Can I verify your business documents?', 'Yes. Our business registration details are listed on this page, and relevant documents are available for verification by prospective business partners upon request.'],
+    ];
+@endphp
+<section class="bg-ash-100">
+    <div class="mx-auto max-w-6xl px-5 py-20 grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+            <p class="eyebrow">FAQ</p>
+            <h2 class="mt-4 text-3xl md:text-4xl text-char-900">Frequently Asked Questions</h2>
+            <p class="mt-4 text-char-700 leading-relaxed">Can't find what you're looking for? Reach out and we will gladly help.</p>
+        </div>
+        <div class="lg:col-span-8">
+            @foreach ($faqs as [$q, $a])
+                <details class="group border-b border-ash-300 py-5" @if ($loop->first) open @endif>
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-bold text-char-900 hover:text-ember-500 transition [&::-webkit-details-marker]:hidden">
+                        <span>{{ $q }}</span>
+                        <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-white text-ember-500 text-xl leading-none transition-transform duration-300 group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-char-700">{{ $a }}</p>
+                </details>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<section class="bg-char-900 text-ash-50">
+    <div class="mx-auto max-w-4xl px-5 py-14 text-center">
+        <h2 class="font-display text-3xl">Still Have Questions?</h2>
+        <p class="mt-4 text-ash-300">Send us a message and we will get back to you.</p>
+        <a href="https://wa.me/{{ $c['whatsapp'] }}" class="mt-8 inline-block rounded-full bg-white text-char-900 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] hover:bg-ash-100 transition">Chat on WhatsApp</a>
+    </div>
+</section>
 @endsection

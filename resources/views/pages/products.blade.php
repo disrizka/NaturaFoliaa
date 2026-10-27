@@ -23,4 +23,11 @@
         @include('partials.product-card', ['product' => $product, 'index' => $loop->index])
     @endforeach
 </div>
+<section class="bg-char-900 text-ash-50">
+    <div class="mx-auto max-w-4xl px-5 py-14 text-center">
+        <h2 class="font-display text-3xl">Let's Discuss Your Requirements</h2>
+        <p class="mt-4 text-ash-300">Contact us to discuss your product requirements and cooperation opportunities.</p>
+        <a href="{{ route('contact') }}" class="mt-8 inline-block rounded-full bg-white text-char-900 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] hover:bg-ash-100 transition">Contact Us</a>
+    </div>
+</section>
 @endsection
