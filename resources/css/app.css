@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+    --color-char-950: #0b2e22;
+    --color-char-900: #0f3d2e;
+    --color-char-800: #14513c;
+    --color-char-700: #4b5f56;
+    --color-ember-400: #8fd1ad;
+    --color-ember-500: #1f7a57;
+    --color-ember-600: #176447;
+    --color-ash-50: #ffffff;
+    --color-ash-100: #eef4f0;
+    --color-ash-300: #c9d6ce;
+}
+
+@layer base {
+    html { scroll-behavior: smooth; }
+    body { @apply bg-white text-char-900 font-sans antialiased; }
+}
+
+@layer components {
+    .eyebrow { @apply text-xs font-bold uppercase tracking-[0.25em] text-char-900; }
+    h1, h2 { @apply font-extrabold tracking-tight; }
+    h3 { @apply font-bold; }
+    .btn-grad {
+        @apply inline-block rounded-full px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-white shadow-lg shadow-emerald-900/10 transition hover:brightness-110;
+        background: linear-gradient(90deg, #1f7a57 0%, #3fbf8a 100%);
+    }
+    .btn-link { @apply text-xs font-bold uppercase tracking-[0.15em] text-char-900 hover:text-ember-500 transition; }
+    .blob { border-radius: 58% 42% 50% 50% / 46% 54% 46% 54%; }
+}
